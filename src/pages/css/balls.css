@@ -1,0 +1,104 @@
+.ballsSection {
+  height: 55vh;
+  width: 100vw;
+  background-color: rgb(23, 23, 23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ballsContainer {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  max-width: 800px;
+  /* max-height: 400px; */
+  flex-wrap: wrap;
+}
+
+.ballContainer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-left: 50px;
+  /* background-color: aliceblue; */
+  /* filter: drop-shadow(0 0 2.4rem #03c98758); */
+  transition: all 0.3s ease-in-out;
+}
+
+.ballContainer:hover {
+  filter: drop-shadow(0 0 3rem rgba(255, 255, 255, 0.628));
+}
+
+.ballGeneralContainer {
+  position: relative;
+}
+
+.ballInfo {
+  user-select: none;
+  position: absolute;
+  width: 380px;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.764);
+  top: -0px;
+  right: 0px;
+  left: 0px;
+  border-radius: 20px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 20px;
+  transition: opacity 0.3s ease-in-out;
+  transform: translate(-80px ,150px);
+  backdrop-filter: blur(20px);
+  /* color: aliceblue; */
+  border: 3px solid #eaeaeacc;
+}
+
+.ballInfo h5 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.ballInfo p {
+  font-size: 22px;
+}
+
+.ballGeneralContainer:hover .ballInfo {
+  z-index: 2;
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .ballsSection {
+    height: 35vh;
+  }  
+  .ballsContainer {
+    gap: 2rem 1.3rem;
+    padding: 1rem;
+  }
+  .ballContainer {
+    height: 80px;
+    width: 80px;
+    margin-left: 0px;
+  }
+  .ballInfo {
+  width: 150px;
+  padding: 5px 5px;
+  transform: translate(-40px ,100px);
+  text-align: center;
+}
+
+.ballInfo h5 {
+  font-size: 18px;
+}
+
+.ballInfo p {
+  font-size: 15px;
+}
+}

@@ -1,0 +1,61 @@
+.watsappButton {
+  position: fixed;
+  /* right: 5rem; */
+  transition: all 0.3s ease-in-out;
+  animation-name: whaButton;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+  z-index: 3;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 15%;
+  top: none;
+  max-width: 1850px;
+  margin: 0 auto;
+  /* padding-right: 5rem; */
+}
+
+.watsappActive {
+  position: fixed;
+}
+
+.watsappButton:hover img {
+  filter: drop-shadow(0 0 1rem rgb(0, 0,0, 0.3));
+  transform: scale(1.08);
+}
+
+.watsappButton img {
+  height: 85px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  margin-right: 40px;
+}
+
+.whatsappActive img {
+  opacity: 1;
+}
+
+@keyframes whaButton {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(50px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .watsappButton img {
+    height: 55px;
+  }  
+  .watsappButton {
+    bottom: 10%;
+    /* top: 35%; */
+    /* left: 30px; */
+  }
+}

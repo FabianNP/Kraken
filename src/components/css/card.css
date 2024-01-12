@@ -1,0 +1,110 @@
+.chalecoCard {
+  position: relative;
+  height: 430px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: rgb(252, 252, 252);
+  backdrop-filter: sepia(10%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 10px 20px;
+  transition: all 0.3s ease-out;
+  box-shadow: -1px -1px 103px -35px rgba(0,0,0,0.5);
+  -webkit-box-shadow: -1px -1px 103px -35px rgba(0,0,0,0.5);
+  -moz-box-shadow: -1px -1px 103px -35px rgba(0,0,0,0.5);
+}
+
+.chalecoCard:hover {
+  background-color: rgb(255, 255, 255);
+  /* border: 2px solid aliceblue; */
+  box-shadow: -1px -1px 103px -35px rgba(0,0,0,0.8);
+  -webkit-box-shadow: -1px -1px 103px -35px rgba(0,0,0,0.8);
+  -moz-box-shadow: -1px -1px 103px -35px rgba(0,0,0,0.8);
+  transform: scale(1.2);
+}
+
+.waveBgContainer {
+  position: absolute;
+  bottom: 400px;
+  height: 200px;
+  width: 100%;
+  z-index: -2;
+  transition: all 0.5s ease-out;
+
+}
+
+.chalecoCard:hover .waveBgContainer {
+  height: 40px;
+}
+
+.waveBgContainer img{
+  height: 600px;
+  width: 100%;
+  object-fit: fill;
+  transition: all 0.5s ease-out;
+  opacity: 1;
+}
+
+.chalecoCard:hover .waveBgContainer img {
+  height: 480px;
+  opacity: 0.9;
+}
+
+.imgChalecoContainer img {
+  height: 240px;
+  /* height: 100%; */
+  margin-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.chalecoCard:hover .imgChalecoContainer img {
+  height: 200px;
+  margin-top: 20px;
+}
+
+.chalecoCard h4 {
+  font-size: 45px;
+  margin-top: 10px;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+
+.chalecoCard:hover h4 {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.chalecoCard p {
+  /* display: none; */
+  height: 0px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 2;
+}
+
+.chalecoCard:hover p {
+  /* display: block; */
+  height: auto;
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .chalecoCard {
+    height: 400px;
+    width: 250px;
+  }
+  .chalecoCard:hover h4 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .imgChalecoContainer img {
+    margin-top: 30px;
+  }
+  .chalecoCard:hover .imgChalecoContainer img {
+    height: 150px;
+    margin-top: 20px;
+  }
+}

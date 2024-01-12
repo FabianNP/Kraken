@@ -1,0 +1,143 @@
+/* #heroInfo {
+  width: 100vw;
+  height: 500px;
+} */
+
+.heroInfoSection {
+  position: relative;
+  background: rgb(64,248,255);
+  background: linear-gradient(69deg, rgba(39, 158, 255, 1) 0%, rgba(182, 255, 250, 1)) 100%;
+  width: 100vw;
+  height: 100vh;
+  /* border-radius: 0 0 200px 200px; */
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0 0;
+  overflow: hidden;
+}
+
+/* .imgContainers {
+  position: absolute;
+  bottom: 0;
+} */
+
+.heroInfoContainer {
+  width: 80%;
+  max-width: 900px;
+  padding-top: 8rem;
+}
+
+.info h2 {
+  font-size: 46px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.info p {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 40px 0 0 0;
+}
+
+.info h3 {
+  font-size: 33px;
+  margin: 100px 0px 40px 0px;
+}
+
+.imgContainer {
+  position: absolute;
+  width: 180%;
+  height: 130px;
+  bottom: 0;
+}
+
+
+.imgContainer0 img{
+  opacity: 0.8;
+  transform: translateX(10%);
+  z-index: -3;
+  animation-name: waves;
+  animation-duration: 9s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+
+.imgContainer1 img{
+  opacity: 0.8;
+  transform: translateX(30%);
+  z-index: -2;
+  animation-name: waves;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0.3s;
+}
+
+.imgContainer2 img{
+  opacity: 0.8;
+  transform: translateX(15%);
+  z-index: -1;
+  animation-name: waves;
+  animation-duration: 15s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0.6s;
+}
+
+@keyframes waves {
+  50%{
+    transform: translateX(15%);
+  }
+  100%{
+    transform: translateX(-10%);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heroInfoSection {
+    max-height: 700px;
+  }
+
+  .heroInfoContainer {
+    /* width: 80%;
+    max-width: 900px; */
+    padding-top: 5rem;
+  }
+
+  .info h2 {
+    font-size: 25px;
+    /* font-weight: 800; */
+    margin-bottom: 30px;
+  }
+  
+  .info p {
+    font-size: 18px;
+    /* font-weight: 500; */
+    margin: 20px 0 0 0;
+  }
+  
+  .info h3 {
+    font-size: 20px;
+    margin: 60px 0px 30px 0px;
+  }
+  .imgContainer {
+    position: absolute;
+    /* width: 180%; */
+    height: 70px;
+  }
+  @keyframes waves {
+    50%{
+      transform: translateX(10%);
+    }
+    100%{
+      transform: translateX(-10%);
+    }
+  }
+}
+
+
+

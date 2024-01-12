@@ -1,0 +1,127 @@
+.navActive {
+  /* opacity: 1!important; */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* transform: translateY(-100px); */
+  /* display: flex; */
+  top: 0%!important;
+  opacity: 1!important;
+}
+
+.navbar {
+  /* transform: translateY(100px); */
+  display: flex;
+  position: fixed;
+  opacity: 0;
+  top: -80px;
+  width: 100vw;
+  color: aliceblue;
+  height: 50px;
+  background: linear-gradient(45deg, rgba(23, 23, 23, 1) 30%, #2f2f2fa6 100%);
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  box-shadow: -15px 10px 17px rgba(10, 10, 10, 0.25);
+  padding: 10px 0px;
+  align-items: center;
+  backdrop-filter: blur(134px);
+  justify-content: center;
+  transition: all 0.4s ease-out 0s;
+  z-index: 2;
+}
+
+
+.navbarWrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin: 0;
+}
+
+
+.menu {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  font-size: 20px;
+  gap: 20px;
+}
+
+.menuAnchor{
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+}
+.menu a{
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.menuAnchor::after {
+  height: 3px;
+  background-color: #03C988;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+}
+
+.menuAnchor:hover {
+  /* opacity: 0; */
+  color: #03C988;
+  width: 100%;
+}
+
+.navButton {
+  display: none;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navButtonActive {
+  transform: rotate(90deg);
+}
+
+.navButtonOff {
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 500px) {
+  .navList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu{
+    /* color: black; */
+    height: 0;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(0deg, rgba(23, 23, 23, 1) 30%, #2f2f2fa6 100%);
+    position: absolute;
+    top: 60px;
+    left: -70px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    transition: all 0.3s ease-out;
+  }
+  .navButton {
+    display: block;
+  }
+  .navList .menuActive {
+    padding: 10px 20px;
+    height: 150px;
+  }
+  .menuAnchor {
+    /* font-size: 1px; */
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.365) ;
+  }
+}
